@@ -2,12 +2,14 @@ export type CaseSubsection = {
   heading?: string;
   paragraphs?: string[];
   bullets?: string[];
+  images?: { src: string; alt: string; wide?: boolean }[];
 };
 
 export type CaseSection = {
   heading: string;
   paragraphs?: string[];
   bullets?: string[];
+  images?: { src: string; alt: string; wide?: boolean }[];
   subsections?: CaseSubsection[];
 };
 
@@ -154,6 +156,11 @@ export const CASES: Case[] = [
               "We synthesised all research into personas and a user journey, mapping actions, touchpoints, emotions, tools, channels, and devices used during day-to-day in-store service.",
               "We also put together a prep document to get the DB1 internal team ready for the Design Sprint.",
             ],
+            images: [
+              { src: "/imgs/ventas/01.png", alt: "User personas: Prospector and Vendedor A, profiles, needs and pains.", wide: true },
+              { src: "/imgs/ventas/02.png", alt: "User personas continued: Vendedor B and Hostess." },
+              { src: "/imgs/ventas/03.png", alt: "Design sprint artefacts from the DB1 kickoff." },
+            ],
           },
         ],
       },
@@ -164,6 +171,9 @@ export const CASES: Case[] = [
             heading: "Design sprint",
             paragraphs: [
               "Using the prep document, we compressed the sprint by 2 days. We ran it with a cross-functional DB1 team: 1 PM, 2 Product Designers, 1 Business Analyst, 1 Fullstack Dev, and 1 Solution Architect. The main focus was to look at the problem from different points of view and start building the solution concept together. This small group became the founding team of the product.",
+            ],
+            images: [
+              { src: "/imgs/ventas/04.png", alt: "Design sprint prioritisation and solution mapping." },
             ],
           },
           {
@@ -198,6 +208,9 @@ export const CASES: Case[] = [
               "Full buying-offer flow, multiple products, garage picker, offer percentages, document upload.",
               "Sale-contract initiation with document upload.",
             ],
+            images: [
+              { src: "/imgs/ventas/05.png", alt: "Product screen: available units grid with fit-by-profile and floor plan." },
+            ],
           },
         ],
       },
@@ -208,6 +221,9 @@ export const CASES: Case[] = [
             heading: "Moderated tests",
             paragraphs: [
               "First usability test with 11 users from 7 business units via Lookback.io. Average rating at that point: 4.5 / 5. The client approved us to move forward.",
+            ],
+            images: [
+              { src: "/imgs/ventas/06.png", alt: "Product screen: buyer registration and multi-buyer flow." },
             ],
           },
           {
@@ -232,6 +248,9 @@ export const CASES: Case[] = [
       },
       {
         heading: "Iterations",
+        images: [
+          { src: "/imgs/ventas/07.png", alt: "Product screen: customer offer preparation." },
+        ],
         subsections: [
           {
             heading: "Available products, separating units from garages and deposits",
@@ -245,12 +264,19 @@ export const CASES: Case[] = [
             paragraphs: [
               "I expanded customization options: custom date ranges, varying monthly values, seller discounts. I created separate simulation paths for each product type. Given its importance to the core service flow, I ran an additional usability test via Lookback.io with 11 users.",
             ],
+            images: [
+              { src: "/imgs/ventas/08.png", alt: "Product screen: purchase simulator, custom terms." },
+            ],
           },
           {
             heading: "Customer buying offer",
             paragraphs: [
               "I interviewed both stakeholders and product sponsors to fully understand the business rules, then mapped all existing scenarios into a user flow before wireframing.",
               "Given the complexity, I ran a moderated usability test using Maze, generating both quantitative and qualitative data with 18 users. Result: the buying-contract time was reduced by 90%.",
+            ],
+            images: [
+              { src: "/imgs/ventas/09.png", alt: "Product screen: purchase simulator, separated by product type." },
+              { src: "/imgs/ventas/10.png", alt: "Product screen: full buying-offer flow." },
             ],
           },
           {
@@ -269,17 +295,26 @@ export const CASES: Case[] = [
             paragraphs: [
               "For each completed functionality, I ran a final presentation with the dev team (frontend, backend, QA) and the business analyst before coding started. All behavior documentation and flow conditionals stayed in Figma, screen links, toasters, messages, edge cases, so we had everything in place before development began.",
             ],
+            images: [
+              { src: "/imgs/ventas/11.jpg", alt: "iPad in real store use, hero context shot." },
+            ],
           },
           {
             heading: "Co-creation workshops with frontends",
             paragraphs: [
               "I ran co-creation sessions with the frontend team, part brainstorm, part design critique, to surface technical constraints early, empower developers to bring suggestions, and build a closer working relationship between design and engineering.",
             ],
+            images: [
+              { src: "/imgs/ventas/12.png", alt: "Product screen: sale contract initiation." },
+            ],
           },
           {
             heading: "Usage metrics",
             paragraphs: [
               "To keep track of user behavior on the app, I defined the product analytics strategy using the H.E.A.R.T. framework and created full event-tagging documentation for the dev team to implement on Firebase / Google Analytics 4.",
+            ],
+            images: [
+              { src: "/imgs/ventas/13.png", alt: "Product screen: hostess arrival notification." },
             ],
           },
         ],
@@ -296,19 +331,6 @@ export const CASES: Case[] = [
     heroAlt: "Ventas. Grupo Plaenge app preview with brand mark and iPad mockups.",
     galleryLayout: "stack",
     gallery: [
-      { src: "/imgs/ventas/01.png", alt: "User personas: Prospector and Vendedor A, profiles, needs and pains.", wide: true },
-      { src: "/imgs/ventas/02.png", alt: "User personas continued: Vendedor B and Hostess." },
-      { src: "/imgs/ventas/03.png", alt: "Design sprint artefacts from the DB1 kickoff." },
-      { src: "/imgs/ventas/04.png", alt: "Design sprint prioritisation and solution mapping." },
-      { src: "/imgs/ventas/05.png", alt: "Product screen: available units grid with fit-by-profile and floor plan." },
-      { src: "/imgs/ventas/06.png", alt: "Product screen: buyer registration and multi-buyer flow." },
-      { src: "/imgs/ventas/07.png", alt: "Product screen: customer offer preparation." },
-      { src: "/imgs/ventas/08.png", alt: "Product screen: purchase simulator, custom terms." },
-      { src: "/imgs/ventas/09.png", alt: "Product screen: purchase simulator, separated by product type." },
-      { src: "/imgs/ventas/10.png", alt: "Product screen: full buying-offer flow." },
-      { src: "/imgs/ventas/11.jpg", alt: "iPad in real store use, hero context shot." },
-      { src: "/imgs/ventas/12.png", alt: "Product screen: sale contract initiation." },
-      { src: "/imgs/ventas/13.png", alt: "Product screen: hostess arrival notification." },
       { src: "/imgs/ventas/14.png", alt: "Product screen: calendar and daily agenda view." },
     ],
   },
@@ -384,6 +406,10 @@ export const CASES: Case[] = [
       },
       {
         heading: "Define, wireframe and prototype",
+        images: [
+          { src: "/imgs/smart-safety/smart-safety-01.png", alt: "Smart Safety concept: on-site truck detection with alert bubbles and low tire pressure warning." },
+          { src: "/imgs/smart-safety/smart-safety-02.png", alt: "Smart Safety concept: augmented-reality guidance overlay on machinery." },
+        ],
         subsections: [
           {
             heading: "First direction: mobile app",
@@ -397,11 +423,17 @@ export const CASES: Case[] = [
               "Since the client's positioning centred on reliability, productivity at lower cost, and safety, we concluded a mobile app wasn't the fastest or safest option. Miners would still need engineers on-site for anything complex, which cuts into productivity.",
               "We pivoted to a Smart Safety concept: use the miner's existing personal safety equipment not only for safety, but for everything the mobile app would do. The first Smart Safety product would be a Safety Glass with high-contrast colours, clear voice-command guidance, AI, machine learning, image recognition, sound analysis, augmented reality for step-by-step repair, and IoT.",
             ],
+            images: [
+              { src: "/imgs/smart-safety/smart-safety-03.png", alt: "Smart Safety concept: voice-driven step-by-step repair flow." },
+            ],
           },
           {
             heading: "Connectivity",
             paragraphs: [
               "Since internet connectivity is a significant challenge at these sites, features like calls would need reliable infrastructure to work: Wi-Fi access points inside and around the mines, or satellite connectivity.",
+            ],
+            images: [
+              { src: "/imgs/smart-safety/smart-safety-04.png", alt: "Smart Safety concept: engineer call surface for remote assistance." },
             ],
           },
           {
@@ -411,6 +443,10 @@ export const CASES: Case[] = [
               "In dangerous situations (downpour, hazardous gases, hazardous materials) the glasses ask the miner to evacuate, and voice commands lead them to the next step.",
               "AR wayfinding surfaces the closest exit, direction, and an estimated time to reach it.",
               "Safety recognition based on the current state of the mine and the equipment in use.",
+            ],
+            images: [
+              { src: "/imgs/smart-safety/smart-safety-05.png", alt: "Smart Safety concept: evacuation alert with AR wayfinding to the closest exit." },
+              { src: "/imgs/smart-safety/smart-safety-06.png", alt: "Smart Safety concept: safety recognition based on mine state and equipment in use." },
             ],
           },
         ],
@@ -429,15 +465,6 @@ export const CASES: Case[] = [
     ],
     heroImage: "/imgs/smart-safety/hero.png",
     heroAlt: "Smart Safety concept, iPhone in hand running the on-site engineer call surface with a hauler truck at a mine site.",
-    galleryLayout: "stack",
-    gallery: [
-      { src: "/imgs/smart-safety/smart-safety-01.png", alt: "Smart Safety concept: on-site truck detection with alert bubbles and low tire pressure warning." },
-      { src: "/imgs/smart-safety/smart-safety-02.png", alt: "Smart Safety concept: augmented-reality guidance overlay on machinery." },
-      { src: "/imgs/smart-safety/smart-safety-03.png", alt: "Smart Safety concept: voice-driven step-by-step repair flow." },
-      { src: "/imgs/smart-safety/smart-safety-04.png", alt: "Smart Safety concept: engineer call surface for remote assistance." },
-      { src: "/imgs/smart-safety/smart-safety-05.png", alt: "Smart Safety concept: evacuation alert with AR wayfinding to the closest exit." },
-      { src: "/imgs/smart-safety/smart-safety-06.png", alt: "Smart Safety concept: safety recognition based on mine state and equipment in use." },
-    ],
   },
 
   /* ---------------------------------------------------------------- */
@@ -511,6 +538,9 @@ export const CASES: Case[] = [
       },
       {
         heading: "First design concept",
+        images: [
+          { src: "/imgs/akumen/01.png", alt: "Akumen dashboard concept, analytics overview.", wide: true },
+        ],
         subsections: [
           {
             heading: "Concept pillars",
@@ -557,7 +587,6 @@ export const CASES: Case[] = [
     heroImage: "/imgs/akumen/hero.webp",
     heroAlt: "Akumen, brand mark and executive dashboard preview.",
     gallery: [
-      { src: "/imgs/akumen/01.png", alt: "Akumen dashboard concept, analytics overview." , wide: true },
       { src: "/imgs/akumen/02.png", alt: "Akumen AI-agent surface, chat and next-best-action recommendations.", wide: true },
     ],
     testimonials: [
