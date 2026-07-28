@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import SiteHeader from "../../site-header";
 import { CASES, type CaseSection } from "../../cases";
-import { ZoomableHero, ZoomableGallery } from "../../zoomable";
+import { ZoomableHero, ZoomableGallery, ZoomableInline } from "../../zoomable";
 
 export function generateStaticParams() {
   return CASES.map((c) => ({ slug: c.slug }));
@@ -43,6 +43,9 @@ function Section({ section }: { section: CaseSection }) {
           ))}
         </ul>
       )}
+      {section.images && section.images.length > 0 && (
+        <ZoomableInline images={section.images} />
+      )}
       {section.subsections?.map((sub, i) => (
         <div className="case-sub" key={`sub-${i}`}>
           {sub.heading && <h3>{sub.heading}</h3>}
@@ -55,6 +58,9 @@ function Section({ section }: { section: CaseSection }) {
                 <li key={`sb-${bi}`}>{b}</li>
               ))}
             </ul>
+          )}
+          {sub.images && sub.images.length > 0 && (
+            <ZoomableInline images={sub.images} />
           )}
         </div>
       ))}

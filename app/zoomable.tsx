@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import Lightbox, { type LightboxImage } from "./lightbox";
 import { asset } from "./assets";
 
@@ -21,9 +22,56 @@ export function ZoomableHero({ src, alt }: { src: string; alt: string }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={asset(src)} alt={alt} loading="eager" decoding="async" />
       </button>
-      {open && (
-        <Lightbox images={[{ src, alt }]} initial={0} onClose={() => setOpen(false)} />
-      )}
+      {open &&
+        createPortal(
+          <Lightbox images={[{ src, alt }]} initial={0} onClose={() => setOpen(false)} />,
+          document.body,
+        )}
+    </>
+  );
+}
+
+/**
+ * Renders inline images within a case section/subsection. Opens the
+ * lightbox on click with prev/next across the inline set.
+ */
+export function ZoomableInline({
+  images,
+}: {
+  images: LightboxImage[];
+}) {
+  const [openIndex, setOpen] = useState<number | null>(null);
+  return (
+    <>
+      <div className="case-inline-images">
+        {images.map((img, i) => (
+          <figure key={i} className="case-inline-images__item">
+            <button
+              type="button"
+              className="case-gallery__zoom"
+              onClick={() => setOpen(i)}
+              aria-label={`Open image ${i + 1}: ${img.alt}`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={asset(img.src)}
+                alt={img.alt}
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+          </figure>
+        ))}
+      </div>
+      {openIndex !== null &&
+        createPortal(
+          <Lightbox
+            images={images}
+            initial={openIndex}
+            onClose={() => setOpen(null)}
+          />,
+          document.body,
+        )}
     </>
   );
 }
@@ -73,13 +121,15 @@ export function ZoomableGallery({
           </figure>
         ))}
       </div>
-      {openIndex !== null && (
-        <Lightbox
-          images={images}
-          initial={openIndex}
-          onClose={() => setOpen(null)}
-        />
-      )}
+      {openIndex !== null &&
+        createPortal(
+          <Lightbox
+            images={images}
+            initial={openIndex}
+            onClose={() => setOpen(null)}
+          />,
+          document.body,
+        )}
     </>
   );
 }
