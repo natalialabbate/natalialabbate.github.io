@@ -54,9 +54,10 @@ export default function Home() {
             </h1>
             <div className="hero-foot">
               <p className="hero-sub">
-                Senior Product Designer based in São Paulo, working with teams
-                worldwide. I combine research, strategy, and craft to build
-                products that fit the people who use them.
+                Senior / Lead Product Designer and builder shaping agentic AI
+                products. I turn complex strategy into clear execution,
+                building scalable digital products that drive product growth and
+                real business results.
               </p>
               <a href="#work" className="hero-scroll" aria-label="Scroll to work">
                 <span>Scroll to explore</span>

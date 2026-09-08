@@ -69,11 +69,294 @@ export type Case = {
 
 export const CASES: Case[] = [
   /* ---------------------------------------------------------------- */
-  /*  CASE 01. Ventas · Grupo Plaenge                                 */
+  /*  CASE 01. Akumen · AssureCare                                    */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "akumen",
+    number: "01",
+    tag: "Healthcare · AI",
+    year: "2025",
+    title: "Akumen · AssureCare",
+    client: "AssureCare",
+    tagline:
+      "An AI- and data-driven web product that turns fragmented healthcare data into actionable insights and campaigns, empowering healthcare payers to act on member risk before it escalates.",
+    disclaimer: "Product not yet publicly launched.",
+    role: "Senior Product Designer",
+    industry: "Healthcare · AI",
+    duration: "Feb 2025 to Jul 2025 (6 months)",
+    timeline: "6 months",
+    tools: ["Figma", "Figma Make", "Lovable"],
+    scope: "Strategy · Research · UX · UI · Design System · Handoff",
+    team: "VP of Product · Director of Product · PM · SMEs · Offshore Dev",
+    tags: [
+      "Web",
+      "Desktop",
+      "AI",
+      "UX Strategy",
+      "UX Research",
+      "Problem Framing",
+      "Information Architecture",
+      "Product Growth",
+      "Competitive Analysis",
+      "Accessibility & Inclusive Design",
+      "Stakeholder Management",
+      "UX Design",
+      "Design Systems",
+      "UI Design",
+    ],
+    goals: [
+      "Enable healthcare insurances to make data-driven decisions for their members.",
+      "Transform complex healthcare data into actionable insights and actions via AI.",
+      "Enable AI to support and manage member risk, and act on it before health risk increases.",
+      "Create campaigns for members and providers that speed up processes instead of relying on manual calls.",
+    ],
+    sections: [
+      {
+        heading: "About the client",
+        paragraphs: [
+          "AssureCare is a prominent player in the American healthcare system, serving 56M+ Americans with healthcare management solutions for payers, members, AI & Data Analytics, providers, pharmacy, nutrition, and configuration tools. They also offer a member web and native app to help members take ownership of their health.",
+        ],
+      },
+      {
+        heading: "Initial briefing",
+        paragraphs: [
+          "The project kicked off with the VP of Product sharing the briefing: the company needed a solid, brand-new, AI- and data-driven product to help their customers make better decisions about their patients' health. The goal was to launch an MVP in a couple of months to demo to clients and get buy-in, while we kept working on product growth in parallel.",
+        ],
+      },
+      {
+        heading: "Discovery, Strategy & Research, business and users",
+        paragraphs: [
+          "Since we didn't have users at the start, I began with a competitor analysis of direct and indirect players, including AI tools, data analytics, and data-visualisation products, to understand their offerings and how we could differentiate. I also talked to SMEs (Subject Matter Experts) to understand their needs better.",
+          "From that analysis, we identified an opportunity to merge the best of those products, fulfill SMEs' needs, and add a Campaign Management tool tailored for healthcare and interconnected with AssureCare's flagship product. That defined the main features.",
+        ],
+      },
+      {
+        heading: "Define & wireframe",
+        paragraphs: [
+          "The team already had a Design System in place, but the VP of Product wanted something brand new to differentiate the product. I decided to use Figma Variants and Variables to build a new Design System on top of the existing one, a way that wouldn't require significant rework from front-end developers.",
+          "We also started testing automated ways to export components so front-end developers could build faster and more confidently, without worrying too much about aesthetics, spacing, or visual consistency (the Design System already handled that). This freed them to focus on what mattered most at that stage: API integrations and back-end connections that would power the product's data layer.",
+        ],
+      },
+      {
+        heading: "First design concept",
+        images: [
+          { src: "/imgs/akumen/01.png", alt: "Akumen dashboard concept, analytics overview.", wide: true },
+        ],
+        subsections: [
+          {
+            heading: "Concept pillars",
+            bullets: [
+              "Web app integrated with the flagship product to capture member health data, risk scores, medications, utilization management, etc.",
+              "Ability to integrate with other sources for complete oversight of members, including data from healthcare competitors.",
+              "A suite of features that allows companies to include or exclude functionalities according to their needs.",
+              "A companion mobile app to surface AI highlights on the go.",
+            ],
+          },
+          {
+            heading: "Main functionalities",
+            bullets: [
+              "Executive homepage for high-level oversight by executives and C-level stakeholders.",
+              "Dashboards with drill-downs, filters, sorting, date-range selectors, aggregation, trend lines, cross-filtering, real-time updates, KPI reordering, export, and AI suggestions.",
+              "Dashboard creation from scratch or from templates.",
+              "AI agent with chat, prompt templates, workflows, and best-next-step / recommended actions to improve results or create new campaigns.",
+              "Integration Ecosystem for linking to other healthcare products, including competitors.",
+              "Member dashboard based on risk level and cohorts.",
+              "Campaign Builder with libraries of cohorts and artefacts to speed up the process.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "User testing",
+        paragraphs: [
+          "I tested with 5 users that matched Akumen's target profile, and had all Product Managers, Business Analysts, and SMEs review the work to make sure we were covering every edge case the team could think of. Interfaces were presented without explanation, similar to an unmoderated usability test, and I collected feedback and insights to keep iterating.",
+        ],
+      },
+      {
+        heading: "Handoff, follow-up & iterate",
+        paragraphs: [
+          "Since we were working with offshore developers, for each completed functionality I described, screen by screen, what each feature and UI component should do, and where users should be routed. Async communication had to work first-time. I also documented behavior and flow conditionals in Figma, covering screen links, toasters, messages, and edge cases, so we had everything in place before coding started.",
+          "We ran daily meetings to align, review features, and keep moving the MVP forward.",
+        ],
+      },
+    ],
+    results: [
+      "5 out of 5 customers who saw the product expressed interest and signed up for the pre-release.",
+      "A 7-day MVP buildout to introduce Voice AI capabilities to the Campaign Management product was delivered and demoed successfully.",
+      "New Design System shipped without significant front-end rework, freeing engineering to focus on API and data-layer work.",
+    ],
+    heroImage: "/imgs/akumen/hero.webp",
+    heroAlt: "Akumen, brand mark and executive dashboard preview.",
+    gallery: [
+      { src: "/imgs/akumen/02.png", alt: "Akumen AI-agent surface, chat and next-best-action recommendations.", wide: true },
+    ],
+    testimonials: [
+      {
+        quote:
+          "We just finished up with the [customer] demo and it went flawlessly. I want you to know this was no short of pulling a rabbit out of a hat. You did an amazing job and were the backbone of all of this effort.",
+        author: "VP of Product",
+      },
+      {
+        quote:
+          "I second, third, fourth and fifth this sentiment. Amazing job and phenomenal effort.",
+        author: "Director of Product",
+      },
+      {
+        quote:
+          "Agree wholeheartedly. None of this would have been possible without you. Thank you sincerely for all the effort and talent you put into this, it was very well received.",
+        author: "Director of Pharmacy Strategy",
+      },
+      {
+        quote:
+          "The whole feature looks incredible. Special shoutout to Natalia. As I mentioned to this team, this is how it starts: slowly at first, then all at once. Let's keep up this momentum to deliver better product experiences.",
+        author: "VP of Engineering",
+      },
+      {
+        quote:
+          "Natalia brought commitment to detail and curiosity, consistently identifying elements that could be improved, particularly from the perspective of universal design. She sought to understand the deeper purpose of what we were building. With a deft hand at Figma, she applied her research and understanding to fit complex data and business constraints into genuinely engaging designs. She also provided substantive input on product strategy, go-to-market, growth opportunities, and brand identity, contributions that are uncommon in a designer and invaluable on a team navigating competing priorities.",
+        author: "Product Manager",
+      },
+    ],
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  CASE 02. Smart Safety                                            */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "smart-safety",
+    number: "02",
+    tag: "Automotive · Mining",
+    year: "2022",
+    title: "Smart Safety",
+    tagline:
+      "A proof of concept that turned mandatory safety equipment into a smart wearable: shorter waiting time for on-site engineers, safer miners, better on-site productivity.",
+    disclaimer: "Proof of concept · exploratory work.",
+    role: "Product Designer",
+    industry: "Automotive · Mining",
+    duration: "Apr 2022 to May 2022 (POC)",
+    timeline: "6 weeks",
+    tools: ["Figma"],
+    scope: "Discovery, UX, UI, concept",
+    team: "Pair of Product Designers",
+    tags: [
+      "Wearable",
+      "AR",
+      "Voice UI",
+      "IoT",
+      "AI",
+      "UX Strategy",
+      "UX Research",
+      "Problem Framing",
+      "Competitive Analysis",
+      "Design Systems",
+      "Accessibility & Inclusive Design",
+      "Stakeholder Management",
+      "UX Design",
+      "UI Design",
+    ],
+    goals: [
+      "Create a mobile solution for engineers heading to remote mine sites to fix machinery.",
+      "Reduce miners' waiting time for on-site engineering support and machinery repair.",
+      "Keep workers safe in hazardous underground and surface conditions.",
+      "Improve miner productivity without compromising safety.",
+    ],
+    sections: [
+      {
+        heading: "About the client",
+        paragraphs: [
+          "A global automotive leader with vehicles on the road in 100+ countries. 95+ years of heritage across truck, bus, and construction equipment divisions. Beyond passenger safety, the client is a dominant force in the mining industry, delivering heavy-duty haulers and excavators built for extreme conditions.",
+          "Known for sustainable engineering and reliability, the client continues to set the standard for industrial innovation.",
+        ],
+      },
+      {
+        heading: "Initial briefing",
+        paragraphs: [
+          "The proof of concept started with the client asking for a mobile solution to support machinery fixing for engineers, worker safety, and productivity for miners on-site in India.",
+          "Personal safety equipment is required in hazardous conditions. Sites include both underground and surface mines. Internet connectivity is often low or non-existent.",
+        ],
+      },
+      {
+        heading: "Discovery and strategy (business)",
+        paragraphs: [
+          "We started with a discovery to understand the client's business model, existing tech partnerships, and how those changes were expected to affect day-to-day work across several industries.",
+          "We also learned the client's communications focus on reliability, productivity at lower cost, and safety.",
+        ],
+      },
+      {
+        heading: "Discovery and research (users)",
+        paragraphs: [
+          "With the client's business direction in mind, we kept momentum with the requested mobile solution but reframed it. Instead of a phone app, we proposed a proof of concept for miners: upgrade their mandatory personal safety equipment so it would serve both purposes at once, protection and repair support.",
+        ],
+      },
+      {
+        heading: "Define, wireframe and prototype",
+        images: [
+          { src: "/imgs/smart-safety/smart-safety-01.png", alt: "Smart Safety concept: on-site truck detection with alert bubbles and low tire pressure warning." },
+          { src: "/imgs/smart-safety/smart-safety-02.png", alt: "Smart Safety concept: augmented-reality guidance overlay on machinery." },
+        ],
+        subsections: [
+          {
+            heading: "First direction: mobile app",
+            paragraphs: [
+              "The starting point was a mobile app for miners that used image recognition and sound analysis to identify quick machinery fixes, letting them repair equipment on the spot without waiting for an engineer to travel to the site. The app would analyse sound or images to provide step-by-step guidance, and send notifications when something went wrong (hazardous gases, for example) so miners could evacuate safely.",
+            ],
+          },
+          {
+            heading: "The pivot: Smart Safety concept",
+            paragraphs: [
+              "Since the client's positioning centred on reliability, productivity at lower cost, and safety, we concluded a mobile app wasn't the fastest or safest option. Miners would still need engineers on-site for anything complex, which cuts into productivity.",
+              "We pivoted to a Smart Safety concept: use the miner's existing personal safety equipment not only for safety, but for everything the mobile app would do. The first Smart Safety product would be a Safety Glass with high-contrast colours, clear voice-command guidance, AI, machine learning, image recognition, sound analysis, augmented reality for step-by-step repair, and IoT.",
+            ],
+            images: [
+              { src: "/imgs/smart-safety/smart-safety-03.png", alt: "Smart Safety concept: voice-driven step-by-step repair flow." },
+            ],
+          },
+          {
+            heading: "Connectivity",
+            paragraphs: [
+              "Since internet connectivity is a significant challenge at these sites, features like calls would need reliable infrastructure to work: Wi-Fi access points inside and around the mines, or satellite connectivity.",
+            ],
+            images: [
+              { src: "/imgs/smart-safety/smart-safety-04.png", alt: "Smart Safety concept: engineer call surface for remote assistance." },
+            ],
+          },
+          {
+            heading: "Core interactions",
+            bullets: [
+              "After analysing machinery, complex fixes are escalated to an expert engineer via voice call. Voice commands guide the miner through each step.",
+              "In dangerous situations (downpour, hazardous gases, hazardous materials) the glasses ask the miner to evacuate, and voice commands lead them to the next step.",
+              "AR wayfinding surfaces the closest exit, direction, and an estimated time to reach it.",
+              "Safety recognition based on the current state of the mine and the equipment in use.",
+            ],
+            images: [
+              { src: "/imgs/smart-safety/smart-safety-05.png", alt: "Smart Safety concept: evacuation alert with AR wayfinding to the closest exit." },
+              { src: "/imgs/smart-safety/smart-safety-06.png", alt: "Smart Safety concept: safety recognition based on mine state and equipment in use." },
+            ],
+          },
+        ],
+      },
+      {
+        heading: "What comes next",
+        paragraphs: [
+          "Next steps for scaling the Smart Safety partnership: noise-cancelling earplugs for protection and voice guidance, gloves with sensors connected to the glasses, textiles that sense environmental changes and share information with other Smart Safety devices, and expanded AR navigation.",
+        ],
+      },
+    ],
+    results: [
+      "Proof of concept delivered in 6 weeks, reframing a mobile-app brief into a Smart Wearable product line.",
+      "Established a scalable Smart Safety concept: glasses first, with a documented roadmap for earplugs, gloves, and instrumented textiles.",
+      "The client validated the direction and roadmap for continued exploration.",
+    ],
+    heroImage: "/imgs/smart-safety/hero.png",
+    heroAlt: "Smart Safety concept, iPhone in hand running the on-site engineer call surface with a hauler truck at a mine site.",
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  CASE 03. Ventas · Grupo Plaenge                                 */
   /* ---------------------------------------------------------------- */
   {
     slug: "ventas-grupo-plaenge",
-    number: "01",
+    number: "03",
     tag: "Real Estate",
     year: "2022",
     title: "Ventas · Grupo Plaenge",
@@ -332,289 +615,6 @@ export const CASES: Case[] = [
     galleryLayout: "stack",
     gallery: [
       { src: "/imgs/ventas/14.png", alt: "Product screen: calendar and daily agenda view." },
-    ],
-  },
-
-  /* ---------------------------------------------------------------- */
-  /*  CASE 02. Smart Safety                                            */
-  /* ---------------------------------------------------------------- */
-  {
-    slug: "smart-safety",
-    number: "02",
-    tag: "Automotive · Mining",
-    year: "2022",
-    title: "Smart Safety",
-    tagline:
-      "A proof of concept that turned mandatory safety equipment into a smart wearable: shorter waiting time for on-site engineers, safer miners, better on-site productivity.",
-    disclaimer: "Proof of concept · exploratory work.",
-    role: "Product Designer",
-    industry: "Automotive · Mining",
-    duration: "Apr 2022 to May 2022 (POC)",
-    timeline: "6 weeks",
-    tools: ["Figma"],
-    scope: "Discovery, UX, UI, concept",
-    team: "Pair of Product Designers",
-    tags: [
-      "Wearable",
-      "AR",
-      "Voice UI",
-      "IoT",
-      "AI",
-      "UX Strategy",
-      "UX Research",
-      "Problem Framing",
-      "Competitive Analysis",
-      "Design Systems",
-      "Accessibility & Inclusive Design",
-      "Stakeholder Management",
-      "UX Design",
-      "UI Design",
-    ],
-    goals: [
-      "Create a mobile solution for engineers heading to remote mine sites to fix machinery.",
-      "Reduce miners' waiting time for on-site engineering support and machinery repair.",
-      "Keep workers safe in hazardous underground and surface conditions.",
-      "Improve miner productivity without compromising safety.",
-    ],
-    sections: [
-      {
-        heading: "About the client",
-        paragraphs: [
-          "A global automotive leader with vehicles on the road in 100+ countries. 95+ years of heritage across truck, bus, and construction equipment divisions. Beyond passenger safety, the client is a dominant force in the mining industry, delivering heavy-duty haulers and excavators built for extreme conditions.",
-          "Known for sustainable engineering and reliability, the client continues to set the standard for industrial innovation.",
-        ],
-      },
-      {
-        heading: "Initial briefing",
-        paragraphs: [
-          "The proof of concept started with the client asking for a mobile solution to support machinery fixing for engineers, worker safety, and productivity for miners on-site in India.",
-          "Personal safety equipment is required in hazardous conditions. Sites include both underground and surface mines. Internet connectivity is often low or non-existent.",
-        ],
-      },
-      {
-        heading: "Discovery and strategy (business)",
-        paragraphs: [
-          "We started with a discovery to understand the client's business model, existing tech partnerships, and how those changes were expected to affect day-to-day work across several industries.",
-          "We also learned the client's communications focus on reliability, productivity at lower cost, and safety.",
-        ],
-      },
-      {
-        heading: "Discovery and research (users)",
-        paragraphs: [
-          "With the client's business direction in mind, we kept momentum with the requested mobile solution but reframed it. Instead of a phone app, we proposed a proof of concept for miners: upgrade their mandatory personal safety equipment so it would serve both purposes at once, protection and repair support.",
-        ],
-      },
-      {
-        heading: "Define, wireframe and prototype",
-        images: [
-          { src: "/imgs/smart-safety/smart-safety-01.png", alt: "Smart Safety concept: on-site truck detection with alert bubbles and low tire pressure warning." },
-          { src: "/imgs/smart-safety/smart-safety-02.png", alt: "Smart Safety concept: augmented-reality guidance overlay on machinery." },
-        ],
-        subsections: [
-          {
-            heading: "First direction: mobile app",
-            paragraphs: [
-              "The starting point was a mobile app for miners that used image recognition and sound analysis to identify quick machinery fixes, letting them repair equipment on the spot without waiting for an engineer to travel to the site. The app would analyse sound or images to provide step-by-step guidance, and send notifications when something went wrong (hazardous gases, for example) so miners could evacuate safely.",
-            ],
-          },
-          {
-            heading: "The pivot: Smart Safety concept",
-            paragraphs: [
-              "Since the client's positioning centred on reliability, productivity at lower cost, and safety, we concluded a mobile app wasn't the fastest or safest option. Miners would still need engineers on-site for anything complex, which cuts into productivity.",
-              "We pivoted to a Smart Safety concept: use the miner's existing personal safety equipment not only for safety, but for everything the mobile app would do. The first Smart Safety product would be a Safety Glass with high-contrast colours, clear voice-command guidance, AI, machine learning, image recognition, sound analysis, augmented reality for step-by-step repair, and IoT.",
-            ],
-            images: [
-              { src: "/imgs/smart-safety/smart-safety-03.png", alt: "Smart Safety concept: voice-driven step-by-step repair flow." },
-            ],
-          },
-          {
-            heading: "Connectivity",
-            paragraphs: [
-              "Since internet connectivity is a significant challenge at these sites, features like calls would need reliable infrastructure to work: Wi-Fi access points inside and around the mines, or satellite connectivity.",
-            ],
-            images: [
-              { src: "/imgs/smart-safety/smart-safety-04.png", alt: "Smart Safety concept: engineer call surface for remote assistance." },
-            ],
-          },
-          {
-            heading: "Core interactions",
-            bullets: [
-              "After analysing machinery, complex fixes are escalated to an expert engineer via voice call. Voice commands guide the miner through each step.",
-              "In dangerous situations (downpour, hazardous gases, hazardous materials) the glasses ask the miner to evacuate, and voice commands lead them to the next step.",
-              "AR wayfinding surfaces the closest exit, direction, and an estimated time to reach it.",
-              "Safety recognition based on the current state of the mine and the equipment in use.",
-            ],
-            images: [
-              { src: "/imgs/smart-safety/smart-safety-05.png", alt: "Smart Safety concept: evacuation alert with AR wayfinding to the closest exit." },
-              { src: "/imgs/smart-safety/smart-safety-06.png", alt: "Smart Safety concept: safety recognition based on mine state and equipment in use." },
-            ],
-          },
-        ],
-      },
-      {
-        heading: "What comes next",
-        paragraphs: [
-          "Next steps for scaling the Smart Safety partnership: noise-cancelling earplugs for protection and voice guidance, gloves with sensors connected to the glasses, textiles that sense environmental changes and share information with other Smart Safety devices, and expanded AR navigation.",
-        ],
-      },
-    ],
-    results: [
-      "Proof of concept delivered in 6 weeks, reframing a mobile-app brief into a Smart Wearable product line.",
-      "Established a scalable Smart Safety concept: glasses first, with a documented roadmap for earplugs, gloves, and instrumented textiles.",
-      "The client validated the direction and roadmap for continued exploration.",
-    ],
-    heroImage: "/imgs/smart-safety/hero.png",
-    heroAlt: "Smart Safety concept, iPhone in hand running the on-site engineer call surface with a hauler truck at a mine site.",
-  },
-
-  /* ---------------------------------------------------------------- */
-  /*  CASE 03. Akumen · AssureCare                                    */
-  /* ---------------------------------------------------------------- */
-  {
-    slug: "akumen",
-    number: "03",
-    tag: "Healthcare · AI",
-    year: "2025",
-    title: "Akumen · AssureCare",
-    client: "AssureCare",
-    tagline:
-      "An AI- and data-driven web product that turns fragmented healthcare data into actionable insights and campaigns, empowering healthcare payers to act on member risk before it escalates.",
-    disclaimer: "Product not yet publicly launched.",
-    role: "Senior Product Designer",
-    industry: "Healthcare · AI",
-    duration: "Feb 2025 to Jul 2025 (6 months)",
-    timeline: "6 months",
-    tools: ["Figma", "Figma Make", "Lovable"],
-    scope: "Strategy · Research · UX · UI · Design System · Handoff",
-    team: "VP of Product · Director of Product · PM · SMEs · Offshore Dev",
-    tags: [
-      "Web",
-      "Desktop",
-      "AI",
-      "UX Strategy",
-      "UX Research",
-      "Problem Framing",
-      "Information Architecture",
-      "Product Growth",
-      "Competitive Analysis",
-      "Accessibility & Inclusive Design",
-      "Stakeholder Management",
-      "UX Design",
-      "Design Systems",
-      "UI Design",
-    ],
-    goals: [
-      "Enable healthcare insurances to make data-driven decisions for their members.",
-      "Transform complex healthcare data into actionable insights and actions via AI.",
-      "Enable AI to support and manage member risk, and act on it before health risk increases.",
-      "Create campaigns for members and providers that speed up processes instead of relying on manual calls.",
-    ],
-    sections: [
-      {
-        heading: "About the client",
-        paragraphs: [
-          "AssureCare is a prominent player in the American healthcare system, serving 56M+ Americans with healthcare management solutions for payers, members, AI & Data Analytics, providers, pharmacy, nutrition, and configuration tools. They also offer a member web and native app to help members take ownership of their health.",
-        ],
-      },
-      {
-        heading: "Initial briefing",
-        paragraphs: [
-          "The project kicked off with the VP of Product sharing the briefing: the company needed a solid, brand-new, AI- and data-driven product to help their customers make better decisions about their patients' health. The goal was to launch an MVP in a couple of months to demo to clients and get buy-in, while we kept working on product growth in parallel.",
-        ],
-      },
-      {
-        heading: "Discovery, Strategy & Research, business and users",
-        paragraphs: [
-          "Since we didn't have users at the start, I began with a competitor analysis of direct and indirect players, including AI tools, data analytics, and data-visualisation products, to understand their offerings and how we could differentiate. I also talked to SMEs (Subject Matter Experts) to understand their needs better.",
-          "From that analysis, we identified an opportunity to merge the best of those products, fulfill SMEs' needs, and add a Campaign Management tool tailored for healthcare and interconnected with AssureCare's flagship product. That defined the main features.",
-        ],
-      },
-      {
-        heading: "Define & wireframe",
-        paragraphs: [
-          "The team already had a Design System in place, but the VP of Product wanted something brand new to differentiate the product. I decided to use Figma Variants and Variables to build a new Design System on top of the existing one, a way that wouldn't require significant rework from front-end developers.",
-          "We also started testing automated ways to export components so front-end developers could build faster and more confidently, without worrying too much about aesthetics, spacing, or visual consistency (the Design System already handled that). This freed them to focus on what mattered most at that stage: API integrations and back-end connections that would power the product's data layer.",
-        ],
-      },
-      {
-        heading: "First design concept",
-        images: [
-          { src: "/imgs/akumen/01.png", alt: "Akumen dashboard concept, analytics overview.", wide: true },
-        ],
-        subsections: [
-          {
-            heading: "Concept pillars",
-            bullets: [
-              "Web app integrated with the flagship product to capture member health data, risk scores, medications, utilization management, etc.",
-              "Ability to integrate with other sources for complete oversight of members, including data from healthcare competitors.",
-              "A suite of features that allows companies to include or exclude functionalities according to their needs.",
-              "A companion mobile app to surface AI highlights on the go.",
-            ],
-          },
-          {
-            heading: "Main functionalities",
-            bullets: [
-              "Executive homepage for high-level oversight by executives and C-level stakeholders.",
-              "Dashboards with drill-downs, filters, sorting, date-range selectors, aggregation, trend lines, cross-filtering, real-time updates, KPI reordering, export, and AI suggestions.",
-              "Dashboard creation from scratch or from templates.",
-              "AI agent with chat, prompt templates, workflows, and best-next-step / recommended actions to improve results or create new campaigns.",
-              "Integration Ecosystem for linking to other healthcare products, including competitors.",
-              "Member dashboard based on risk level and cohorts.",
-              "Campaign Builder with libraries of cohorts and artefacts to speed up the process.",
-            ],
-          },
-        ],
-      },
-      {
-        heading: "User testing",
-        paragraphs: [
-          "I tested with 5 users that matched Akumen's target profile, and had all Product Managers, Business Analysts, and SMEs review the work to make sure we were covering every edge case the team could think of. Interfaces were presented without explanation, similar to an unmoderated usability test, and I collected feedback and insights to keep iterating.",
-        ],
-      },
-      {
-        heading: "Handoff, follow-up & iterate",
-        paragraphs: [
-          "Since we were working with offshore developers, for each completed functionality I described, screen by screen, what each feature and UI component should do, and where users should be routed. Async communication had to work first-time. I also documented behavior and flow conditionals in Figma, covering screen links, toasters, messages, and edge cases, so we had everything in place before coding started.",
-          "We ran daily meetings to align, review features, and keep moving the MVP forward.",
-        ],
-      },
-    ],
-    results: [
-      "5 out of 5 customers who saw the product expressed interest and signed up for the pre-release.",
-      "A 7-day MVP buildout to introduce Voice AI capabilities to the Campaign Management product was delivered and demoed successfully.",
-      "New Design System shipped without significant front-end rework, freeing engineering to focus on API and data-layer work.",
-    ],
-    heroImage: "/imgs/akumen/hero.webp",
-    heroAlt: "Akumen, brand mark and executive dashboard preview.",
-    gallery: [
-      { src: "/imgs/akumen/02.png", alt: "Akumen AI-agent surface, chat and next-best-action recommendations.", wide: true },
-    ],
-    testimonials: [
-      {
-        quote:
-          "We just finished up with the [customer] demo and it went flawlessly. I want you to know this was no short of pulling a rabbit out of a hat. You did an amazing job and were the backbone of all of this effort.",
-        author: "VP of Product",
-      },
-      {
-        quote:
-          "I second, third, fourth and fifth this sentiment. Amazing job and phenomenal effort.",
-        author: "Director of Product",
-      },
-      {
-        quote:
-          "Agree wholeheartedly. None of this would have been possible without you. Thank you sincerely for all the effort and talent you put into this, it was very well received.",
-        author: "Director of Pharmacy Strategy",
-      },
-      {
-        quote:
-          "The whole feature looks incredible. Special shoutout to Natalia. As I mentioned to this team, this is how it starts: slowly at first, then all at once. Let's keep up this momentum to deliver better product experiences.",
-        author: "VP of Engineering",
-      },
-      {
-        quote:
-          "Natalia brought commitment to detail and curiosity, consistently identifying elements that could be improved, particularly from the perspective of universal design. She sought to understand the deeper purpose of what we were building. With a deft hand at Figma, she applied her research and understanding to fit complex data and business constraints into genuinely engaging designs. She also provided substantive input on product strategy, go-to-market, growth opportunities, and brand identity, contributions that are uncommon in a designer and invaluable on a team navigating competing priorities.",
-        author: "Product Manager",
-      },
     ],
   },
 ];
