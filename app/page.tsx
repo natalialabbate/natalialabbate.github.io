@@ -49,6 +49,18 @@ export default function Home() {
       <main className="page">
         <section className="hero container" aria-labelledby="hero-title">
           <div className="hero-copy">
+            <a
+              href="#contact"
+              className="hero-status-pill"
+              aria-label="Available to new projects, jump to contact"
+            >
+              <span className="status-dot" aria-hidden>
+                <span className="status-dot__ring" />
+                <span className="status-dot__core" />
+              </span>
+              <span className="status-text mono">AVAILABLE TO NEW PROJECTS</span>
+            </a>
+
             <h1 id="hero-title" className="hero-headline">
               Natalia L&apos;Abbate
             </h1>
